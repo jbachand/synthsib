@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthsib"
+version = "0.1.0"
+description = "Hierarchical shortcut dispatcher for quantum algorithm simulation via synthetic sibling generators and closed-form solvers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Synthetic Sibling Dispatcher contributors" },
+]
+keywords = [
+    "quantum-computing",
+    "quantum-simulation",
+    "quantum-algorithms",
+    "shor",
+    "grover",
+    "stim",
+    "tensor-network",
+    "synthetic-quantum",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+stim = ["stim>=1.12"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+all = [
+    "stim>=1.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/<user>/synthsib"
+Repository = "https://github.com/<user>/synthsib"
+Issues = "https://github.com/<user>/synthsib/issues"
+
+[tool.setuptools]
+packages = ["synthsib"]
+py-modules = [
+    "hierarchical_adaptive",
+    "hierarchical_adaptive_v17",
+    "hierarchical_adaptive_v19",
+    "hierarchical_adaptive_v20",
+    "sampling_amplifier",
+    "framework_at_scale",
+    "pipeline_benchmark",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["synthsib/tests"]
+python_files = ["test_*.py"]
