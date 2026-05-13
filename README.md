@@ -1,4 +1,4 @@
-# Synthetic Sibling Dispatcher
+# Quantum Synthetic Sibling Dispatcher
 
 **Hierarchical shortcut dispatcher for quantum algorithm simulation.**
 
